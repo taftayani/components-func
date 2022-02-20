@@ -34,6 +34,10 @@ code {
   justify-content: center;
   margin-top: 30px;
 }
+.margin-center{
+  margin-left: auto;
+  margin-right: auto;
+}
 .mr-10px{
   margin-right: 10px;
 }
@@ -48,6 +52,9 @@ code {
 }
 .w-300px{
   width: 300px;
+}
+.w-500px{
+  width:500px;
 }
 .p-10px{
   padding: 10px;
