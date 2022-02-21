@@ -3,6 +3,10 @@
 export const StyleBtn = (style) => {
   return style === true ? "button-tab-active" : "button-tab";
 };
+// img showing method
+export const ShowingImgFilter = (img) => {
+  return img === 0 ? "/img-todo/check-ndone.svg" : "/img-todo/check-done.svg";
+};
 //   filter done and undone
 export const FilterDone = (todos) => {
   return todos !== ""

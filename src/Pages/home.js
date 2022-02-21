@@ -19,28 +19,30 @@ const HomePage = () => {
   };
   return (
     <>
-      <h1>Task Todo</h1>
-      <div className="flex-module content-center">
-        <ButtonComponent
-          TextBtn="Add Todo"
-          OnClick={() => BtnDirect("add")}
-          ClassBtn={StyleBtn(btn === "add")}
-        />
-        <ButtonComponent
-          TextBtn="See Undone"
-          OnClick={() => BtnDirect("undone")}
-          ClassBtn={StyleBtn(btn === "undone")}
-        />
-        <ButtonComponent
-          TextBtn="See Done"
-          OnClick={() => BtnDirect("done")}
-          ClassBtn={StyleBtn(btn === "done")}
-        />
+      <div className="App">
+        <h1>Task Todo</h1>
+        <div className="flex-module content-center">
+          <ButtonComponent
+            TextBtn="Add Todo"
+            OnClick={() => BtnDirect("add")}
+            ClassBtn={StyleBtn(btn === "add")}
+          />
+          <ButtonComponent
+            TextBtn="See Undone"
+            OnClick={() => BtnDirect("undone")}
+            ClassBtn={StyleBtn(btn === "undone")}
+          />
+          <ButtonComponent
+            TextBtn="See Done"
+            OnClick={() => BtnDirect("done")}
+            ClassBtn={StyleBtn(btn === "done")}
+          />
+        </div>
+        {/* create Todo  */}
+        {btn === "add" && <CreateTodo />}
+        {btn === "done" && <ListTodos todos={FilterDone(listTodos)} />}
+        {btn === "undone" && <ListTodos todos={FilterUndone(listTodos)} />}
       </div>
-      {/* create Todo  */}
-      {btn === "add" && <CreateTodo />}
-      {btn === "done" && <ListTodos todos={FilterDone(listTodos)} />}
-      {btn === "undone" && <ListTodos todos={FilterUndone(listTodos)} />}
     </>
   );
 };

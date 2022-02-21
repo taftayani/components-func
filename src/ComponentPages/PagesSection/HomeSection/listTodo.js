@@ -1,4 +1,5 @@
 import ButtonComponent from "../../Element/button";
+import { ShowingImgFilter } from "./LogicComponent";
 
 /* eslint-disable jsx-a11y/alt-text */
 const ListTodos = ({ todos }) => {
@@ -11,7 +12,7 @@ const ListTodos = ({ todos }) => {
                 key={index}
                 className="flex-module content-center mt-50px w-500px margin-center"
               >
-                <img src="/img-todo/check-done.svg" />
+                <img src={ShowingImgFilter(list.status)} />
                 <div className="text-left w-300px display-grid">
                   <label className={"header-list"}>{list.title}</label>
                   <label className={"description-list"}>
